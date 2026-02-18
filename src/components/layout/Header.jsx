@@ -26,9 +26,7 @@ export function Header() {
         </div>
 
         <NavbarCollapse>
-          <NavbarLink href="#aboutus" active>
-            About Us
-          </NavbarLink>
+          <NavbarLink href="#aboutus"> About Us </NavbarLink>
           <NavbarLink href="#programs">Our Programs</NavbarLink>
           <NavbarLink href="#placement">Placement</NavbarLink>
           <NavbarLink href="#events">Events</NavbarLink>
