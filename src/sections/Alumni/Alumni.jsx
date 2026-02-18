@@ -78,7 +78,7 @@ const Alumni = () => {
           <div className="w-full md:w-5/12 mb-6 md:mb-0 md:pe-4">
             <p className="uppercase mb-1 text-white">Alumni</p>
 
-            <h2 className="text-3xl lg:text-5xl font-bold ">
+            <h2 className="text-3xl lg:text-4xl font-bold ">
               <span className="font-normal">Explore inspiring journeys of</span>{" "}
               graduates excelling in engineering, management, technology, and
               more.

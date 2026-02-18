@@ -17,8 +17,9 @@ const Infrastructure = () => {
             Our Infrastructure
           </h6>
 
-          <h2 className="text-3xl lg:text-5xl font-bold text-red-800 mt-2">
-            Experience a vibrant <span className="text-orange-400 font-normal">campus life</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-red-800 mt-2">
+            Experience a vibrant{" "}
+            <span className="text-orange-400 font-normal">campus life</span>
             <br />
             that goes beyond academics
           </h2>
@@ -32,10 +33,7 @@ const Infrastructure = () => {
         {/* Image Grid */}
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {images.map((img, index) => (
-            <div
-              key={index}
-              className="overflow-hidden rounded-lg group"
-            >
+            <div key={index} className="overflow-hidden rounded-lg group">
               <img
                 src={img}
                 alt={`Infrastructure ${index + 1}`}
