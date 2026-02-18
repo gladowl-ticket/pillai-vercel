@@ -1,6 +1,8 @@
 import BannerImg from "../../assets/cta/1.jpg";
+import { useModal } from "../../sections/FormModal/ModalContext";
 
 const CTA = () => {
+  const { openModal } = useModal();
   return (
     <section className="pb-10">
       <div className="container">
@@ -30,7 +32,7 @@ const CTA = () => {
 
           {/* Right Button */}
           <div>
-            <button className="mt-4 lg:mt-0 bg_y_gradient text-black font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2">
+            <button onClick={openModal}  className="mt-4 lg:mt-0 bg_y_gradient text-black font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2">
               Enquire Now
               <span>→</span>
             </button>

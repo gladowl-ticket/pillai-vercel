@@ -13,17 +13,24 @@ import HeroM_4 from "../../assets/hero/04.png";
 const Hero = () => {
   return (
     <div
-      className="
-        [&_[data-testid='carousel-indicator']]:border
-        [&_[data-testid='carousel-indicator']]:border-black
-        [&_[data-testid='carousel-indicator']]:bg-white
-        [&_[data-testid='carousel-indicator'][aria-current='true']]:bg-black
-        [&_[data-testid='carousel-left-control']]:text-black
-        [&_[data-testid='carousel-right-control']]:text-black
-        hero_section
-      "
+      className="hero_section"
     >
-      <Carousel slide interval={1500}>
+      <Carousel
+        slide
+        interval={1500}
+        indicators={true}
+        className=""
+        theme={{
+          indicators: {
+            active: {
+              off: 'bg-white/50 hover:bg-white',
+              on: 'bg-red-800',
+            },
+            base: 'h-3 w-3 rounded-full border border-red-800',
+            wrapper: 'absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3',
+          },
+        }}
+      >
         {/* Slide 1 */}
         <div className="relative flex h-full items-center justify-center">
           <img className="hidden md:block w-full h-full object-contain" src={Hero_1} alt="" />
