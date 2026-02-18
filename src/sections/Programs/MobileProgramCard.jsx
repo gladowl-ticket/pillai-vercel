@@ -1,12 +1,36 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flowbite-react";
+import { BsBook } from "react-icons/bs";
+import { BsPencil } from "react-icons/bs";
+
+const accordionTheme = {
+  title: {
+    base: "flex w-full items-center justify-between p-5 text-left font-medium text-white rounded-lg",
+    flush: {
+      off: "hover:bg-red-800 focus:ring-0 dark:hover:bg-red-800",
+      on: "bg-transparent"
+    },
+    open: {
+      off: "",
+      on: "bg-red-900 text-white"
+    },
+    arrow: {
+      base: "h-6 w-6 shrink-0",
+      open: {
+        off: "",
+        on: "rotate-180"
+      }
+    }
+  }
+};
+
 
 function MobileProgramCard({ program, categoryKey, index }) {
   return (
-    <Accordion collapseAll className="mobile_accordion">
-      <AccordionPanel>
-        <AccordionTitle className="bg-red-900 text-white rounded-lg">
+    <Accordion theme={accordionTheme} collapseAll className="mobile_accordion">
+      <AccordionPanel className="hover:text-red-800">
+        <AccordionTitle className="bg-red-900 text-white rounded-lg hover:!bg-red-800">
           {program.program_name}
         </AccordionTitle>
         <AccordionContent>
@@ -15,7 +39,7 @@ function MobileProgramCard({ program, categoryKey, index }) {
 
             <SectionCarousel
               title="What you will learn"
-              icon="📘"
+              icon={<BsBook/>}
               slides={[
                 {
                   title: "Overview",
@@ -41,7 +65,7 @@ function MobileProgramCard({ program, categoryKey, index }) {
 
             <SectionCarousel
               title="From Eligibility to Career Success"
-              icon="✏️"
+              icon={<BsPencil/>}
               slides={[
                 {
                   title: "Eligibility",
@@ -177,7 +201,7 @@ function SectionCarousel({ title, icon, slides }) {
       </div>
 
       {/* DOTS */}
-      <div className="flex justify-center gap-2 mt-4">
+      {/* <div className="flex justify-center gap-2 mt-4">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -187,7 +211,7 @@ function SectionCarousel({ title, icon, slides }) {
             }`}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="bg_overlay_program absolute"></div>
     </div>
