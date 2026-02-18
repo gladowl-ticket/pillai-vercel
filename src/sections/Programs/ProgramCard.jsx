@@ -1,5 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import MobileProgramCard from "./MobileProgramCard";
+import { BsBook } from "react-icons/bs";
+import { BsFillPenFill } from "react-icons/bs";
 
 export default function ProgramCard({ program, categoryKey, index }) {
   return (
@@ -32,7 +34,7 @@ function DesktopProgramCard({ program }) {
       {/* WHAT YOU WILL LEARN */}
       <SectionCarousel
         title="What you will learn"
-        icon="📘"
+        icon={<BsBook />}
         slides={[
           {
             title: "Overview",
@@ -59,7 +61,7 @@ function DesktopProgramCard({ program }) {
       {/* ELIGIBILITY & CAREER */}
       <SectionCarousel
         title="From Eligibility to Career Success"
-        icon="✏️"
+        icon={<BsFillPenFill />}
         slides={[
           {
             title: "Eligibility",

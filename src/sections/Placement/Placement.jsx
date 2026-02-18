@@ -69,8 +69,8 @@ return(
                 positions in multinational companies (MNCs), emerging startups, and prestigious government sectors</p>
             <div className="flex flex-wrap">
                 {head.map((item, index) => (
-                <div key={index} className="w-1/2 md:w-1/4 px-2 mb-4">
-                    <div className="border border-gray-300 bg-gray-200 py-3 px-2 rounded-xl text-center">
+                <div key={index} className="w-1/2 md:w-1/4 px-1 mb-4">
+                    <div className="border border-gray-300 bg-gray-200 py-3 px-1 rounded-xl text-center">
                         <h4 className="text-3xl text-black texte-center font-extrabold mb-2">{item}</h4>
                         <p className="text-sm">{desc[index]}</p>
                     </div>

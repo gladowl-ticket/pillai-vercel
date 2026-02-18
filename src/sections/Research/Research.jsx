@@ -74,7 +74,7 @@ const Research = () => {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-start gap-4 mt-6">
+        <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={scrollPrev}
             className="p-2 bg-orange-400 rounded-full cursor-pointer"
