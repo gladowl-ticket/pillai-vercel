@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --yellow: #ee8d21;
+  --light: #f1f3fa;
+  --dark: #000000;
+  --text_red: #8c1b28;
+  --dark_red: #681319;
+  --light_red: #b72333;
+  --dark_yellow: #ee8d21;
+  --light_yellow: #ee8d21;
+  --grey: #f2f5f6;
+  --lgray: #f2f5f6;
+  --t_head: #040707;
+  --t_desc: #4b5563;
+  --headfont01: "Inter", sans-serif;
+  --font_02: "Inter", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--font_02);
+  background-color: #fff;
+  font-display: swap;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_02);
+}
+
+p {
+  color: var(--t_desc);
+}
+.text-white{
+   color: #fff !important;
+}
+.bg_v_light_red{
+    background-color: #FFE8CE;
+}
+.bg_gradient{
+  background-image: linear-gradient(
+    90deg,
+    var(--dark_red) 0%,
+    var(--light_red) 100%
+  );
+}
+
+
+/* Programs */
+.bg_gradient {
+  background-image: linear-gradient(to bottom right, #7a1717, #a52a2a);
+}
+
+.programs .level_btn {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0 !important;
+}
+
+.programs .level_btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.programs .level_btn.active,
+.programs .level_btn[aria-selected="true"] {
+  background-color: var(--light_yellow);
+  color: #000;
+}
+
+.programs .course_btn {
+  color: #fff;
+  border: none;
+  border-radius: 0 !important;
+  background: transparent;
+}
+
+.programs .course_btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.programs .course_btn.active {
+  background-color: var(--light_red);
+}
+
+.bg_dark_red {
+  background-color: var(--dark_red);
+}
+
+.border-dark-red {
+  border-color: #a7454c !important;
+}
+
+.border-light-red {
+  border-color: #cd6b76 !important;
+}
+
+
+
+.fs_12 {
+  font-size: 12px;
+}
+
+.program_carousel .item {
+  background-image: linear-gradient(
+    -90deg,
+    var(--dark_red) 100%,
+    var(--light_red) 100%
+  );
+  min-height: 200px;
+}
+
+
+
+.program_carousel .item img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+.program_carousel_dot {
+  z-index: 30;
+}
+
+.bg_overlay_program {
+  position: absolute;
+  background: linear-gradient(to left, #681319 20%, rgba(104, 19, 25, 0) 100%);
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.mobile_accordion button[aria-expanded="true"] {
+  background-color: var(--light_red) !important;
+}
+
+.mobile_accordion button::after {
+  background-image: url("./assets/programs/close.png");
+  background-size: 13px;
+}
+
+.mobile_accordion button[aria-expanded="false"]::after {
+  background-image: url("./assets/programs/arrow.png");
+  background-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .program_carousel_nav {
+    top: unset;
+    bottom: -40px;
+    right: calc(50% - 35px);
+  }
+
+  .bg_overlay_program {
+    background: unset;
+  }
+
+  .program_carousel .item {
+    min-height: 300px;
+  }
+}
+
+
+/* /Programs */
+
+.bg_y_gradient{
+  background-image: linear-gradient(
+    90deg,
+    #ffc315 0%,
+    #ffc315 100%
+  );
+}
+.paused {
+  animation-play-state: paused;
+}
+/* ----- */
+/* ----- */
+.bg-orange {
+  background-color: #ee8d21;
+}
+.ps-01 {
+  padding-left: 45px !important;
+}
+ 
+.program_desc_i {
+  position: relative;
+  left: -30px;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+.program_carousel::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 54px;
+  height: calc(100% - 30px);
+  border-left: 1px dashed #fff;
+  width: 1px;
+}
+ 
+.program_carousel_nav {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  display: flex;
+  gap: 10px;
+  z-index: 30;
+}
+@media (max-width:992px){
+  .program_carousel_nav {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 30;
+}
+}
+/* ----- */
+
+/* Accre */
+.accreditations img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+/* Accre */
+
+.bg-orange {
+  background-color: #ee8d21;
+}
+ 
+.border-orange {
+  border-bottom: solid 2px #ee8d21;
+}
+
+@media (max-width: 991px) {
+  .program_carousel_nav {
+    top: unset;
+    bottom: -40px;
+    right: calc(50% - 35px);
+  }
+ 
+  .bg_overlay_program {
+    background: unset;
+  }
+ 
+  .program_carousel .item {
+    min-height: 300px;
+  }
+  .d-none {
+    display: none;
+  }
+}
+/* /Programs */
+.accreditations img {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+ 
+.bg-orange {
+  background-color: #ee8d21;
+}
+ 
+.border-orange {
+  border-bottom: solid 2px #ee8d21;
+}
+@media (min-width: 992px) {
+  .accreditations img {
+    height: 140px;
+  }
+}
+.mb-3 {
+  margin-bottom: 14px;
+}
