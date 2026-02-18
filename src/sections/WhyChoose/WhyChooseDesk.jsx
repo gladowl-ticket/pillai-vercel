@@ -10,13 +10,13 @@ const WhyChooseDesk = ({whyChooseData}) =>{
     const [openIndex, setOpenIndex] = useState(0);
 
 return(
-      <div className="w-full lg:w-4/5">
+      <div className="w-full lg:w-4/5 why_choose_desk">
         <Accordion className="border-0 ">
           {whyChooseData.map((item, i) => {
             const isOpen = openIndex === i;
             return(
  
-            <AccordionPanel key={i} className="group border-b border-red-800 outline-0 ">
+            <AccordionPanel key={i} className="group border-b border-red-800 outline-0 focus:outline-none focus:ring-0 focus:ring-transparent">
               
               {/* HEADER */}
               <AccordionTitle onClick={() => setOpenIndex(isOpen ? null : i)} className="p-0 bg-white hover:bg-white border-b-2 border-red-800 outline-0">
