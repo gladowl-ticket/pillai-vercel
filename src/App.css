@@ -42,20 +42,19 @@ h6 {
 p {
   color: var(--t_desc);
 }
-.text-white{
-   color: #fff !important;
+.text-white {
+  color: #fff !important;
 }
-.bg_v_light_red{
-    background-color: #FFE8CE;
+.bg_v_light_red {
+  background-color: #ffe8ce;
 }
-.bg_gradient{
+.bg_gradient {
   background-image: linear-gradient(
     90deg,
     var(--dark_red) 0%,
     var(--light_red) 100%
   );
 }
-
 
 /* Programs */
 .bg_gradient {
@@ -106,8 +105,6 @@ p {
   border-color: #cd6b76 !important;
 }
 
-
-
 .fs_12 {
   font-size: 12px;
 }
@@ -121,16 +118,12 @@ p {
   min-height: 200px;
 }
 
-
-
 .program_carousel .item img {
   width: auto;
   max-width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
-
 
 .program_carousel_dot {
   z-index: 30;
@@ -177,15 +170,10 @@ p {
   }
 }
 
-
 /* /Programs */
 
-.bg_y_gradient{
-  background-image: linear-gradient(
-    90deg,
-    #ffc315 0%,
-    #ffc315 100%
-  );
+.bg_y_gradient {
+  background-image: linear-gradient(90deg, #ffc315 0%, #ffc315 100%);
 }
 .paused {
   animation-play-state: paused;
@@ -198,7 +186,7 @@ p {
 .ps-01 {
   padding-left: 45px !important;
 }
- 
+
 .program_desc_i {
   position: relative;
   left: -30px;
@@ -215,7 +203,7 @@ p {
   border-left: 1px dashed #fff;
   width: 1px;
 }
- 
+
 .program_carousel_nav {
   position: absolute;
   top: 0px;
@@ -224,7 +212,7 @@ p {
   gap: 10px;
   z-index: 30;
 }
-@media (max-width:992px){
+@media (max-width: 992px) {
   .program_carousel_nav {
     position: absolute;
     top: -45px;
@@ -232,7 +220,7 @@ p {
     display: flex;
     gap: 10px;
     z-index: 30;
-}
+  }
 }
 /* ----- */
 
@@ -247,7 +235,7 @@ p {
 .bg-orange {
   background-color: #ee8d21;
 }
- 
+
 .border-orange {
   border-bottom: solid 2px #ee8d21;
 }
@@ -258,11 +246,11 @@ p {
     bottom: -40px;
     right: calc(50% - 35px);
   }
- 
+
   .bg_overlay_program {
     background: unset;
   }
- 
+
   .program_carousel .item {
     min-height: 300px;
   }
@@ -276,17 +264,20 @@ p {
   width: 100%;
   margin-bottom: 20px;
 }
- 
+
 .bg-orange {
   background-color: #ee8d21;
 }
- 
+
 .border-orange {
   border-bottom: solid 2px #ee8d21;
 }
 @media (min-width: 992px) {
   .accreditations img {
     height: 140px;
+  }
+  .ps-01 {
+    padding-left: 45px;
   }
 }
 .mb-3 {

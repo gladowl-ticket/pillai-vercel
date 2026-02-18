@@ -23,12 +23,14 @@ export default function ProgramCard({ program, categoryKey, index }) {
 
 function DesktopProgramCard({ program }) {
   return (
-    <div className="border border-dark-red rounded-3xl bg_dark_red pt-5 px-2 overflow-hidden text-white">
-      <h4 className="text-xl lg:text-2xl font-semibold text-white">{program.program_name}</h4>
+    <div className="border border-dark-red rounded-3xl bg_dark_red pt-5 ps-01 overflow-hidden text-white">
+      <h4 className="text-xl lg:text-2xl font-semibold text-white">
+        {program.program_name}
+      </h4>
       <p className="text-sm text-white">{program.School_name}</p>
 
       {/* WHAT YOU WILL LEARN */}
-      <SectionCarousel 
+      <SectionCarousel
         title="What you will learn"
         icon="📘"
         slides={[
@@ -104,8 +106,12 @@ function SectionCarousel({ title, icon, slides }) {
           {slides.map((slide, i) => (
             <div key={i} className="flex-[0_0_100%] md:lg:flex-[0_0_80%] px-2">
               <div className="item border border-light-red rounded-xl p-3 lg:p-4 relative overflow-hidden bg_dark_red">
-                <h4 className="font-semibold mb-2 relative z-10">{slide.title}</h4>
-                <div className="text-sm space-y-2 relative z-10">{slide.content}</div>
+                <h4 className="font-semibold mb-2 relative z-10">
+                  {slide.title}
+                </h4>
+                <div className="text-sm space-y-2 relative z-10">
+                  {slide.content}
+                </div>
 
                 {slide.img && (
                   <img
@@ -171,10 +177,7 @@ function HtmlText({ html, className = "" }) {
   }
 
   return (
-    <div
-      className={className}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
   );
 }
 
@@ -185,7 +188,6 @@ function getProgramImage(type, index) {
 
   return new URL(
     `../../assets/programs/${type}-img/${index}.png`,
-    import.meta.url
+    import.meta.url,
   ).href;
 }
-
