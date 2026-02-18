@@ -1,3 +1,4 @@
+import { useEffect, useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import MobileProgramCard from "./MobileProgramCard";
 import { BsBook } from "react-icons/bs";
@@ -86,13 +87,41 @@ function DesktopProgramCard({ program }) {
 
 function SectionCarousel({ title, icon, slides }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: false, // ❗ required for disabling buttons
     align: "start",
-    speed: 8,
   });
 
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi && emblaApi.scrollNext();
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const updateButtons = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    updateButtons();
+    emblaApi.on("select", updateButtons);
+    emblaApi.on("reInit", updateButtons);
+
+    return () => {
+      emblaApi.off("select", updateButtons);
+      emblaApi.off("reInit", updateButtons);
+    };
+  }, [emblaApi, updateButtons]);
+
+  const scrollPrev = useCallback(() => {
+    if (!emblaApi || !canScrollPrev) return;
+    emblaApi.scrollPrev();
+  }, [emblaApi, canScrollPrev]);
+
+  const scrollNext = useCallback(() => {
+    if (!emblaApi || !canScrollNext) return;
+    emblaApi.scrollNext();
+  }, [emblaApi, canScrollNext]);
 
   return (
     <div className="relative py-6 program_carousel">
@@ -128,19 +157,33 @@ function SectionCarousel({ title, icon, slides }) {
         </div>
       </div>
 
+      {/* Buttons */}
       <div className="program_carousel_nav hidden lg:flex gap-2">
         <button
           type="button"
           onClick={scrollPrev}
-          className="w-8 h-8 rounded-full bg-[var(--light_yellow)] text-black flex items-center justify-center"
+          disabled={!canScrollPrev}
+          className={`w-8 h-8 rounded-full flex items-center justify-center
+            ${
+              canScrollPrev
+                ? "bg-[var(--light_yellow)] text-black"
+                : "bg-gray-400 text-gray-600 cursor-not-allowed"
+            }`}
           aria-label="Previous"
         >
           ‹
         </button>
+
         <button
           type="button"
           onClick={scrollNext}
-          className="w-8 h-8 rounded-full bg-[var(--light_yellow)] text-black flex items-center justify-center"
+          disabled={!canScrollNext}
+          className={`w-8 h-8 rounded-full flex items-center justify-center
+            ${
+              canScrollNext
+                ? "bg-[var(--light_yellow)] text-black"
+                : "bg-gray-400 text-gray-600 cursor-not-allowed"
+            }`}
           aria-label="Next"
         >
           ›
@@ -174,9 +217,7 @@ function List({ items = [], layout = "stack" }) {
 }
 
 function HtmlText({ html, className = "" }) {
-  if (!html) {
-    return null;
-  }
+  if (!html) return null;
 
   return (
     <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
@@ -184,9 +225,7 @@ function HtmlText({ html, className = "" }) {
 }
 
 function getProgramImage(type, index) {
-  if (!type || !index) {
-    return null;
-  }
+  if (!type || !index) return null;
 
   return new URL(
     `../../assets/programs/${type}-img/${index}.png`,
