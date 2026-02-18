@@ -16,7 +16,7 @@ const Accreditations = () => {
         </div>
 
         <div className="flex justify-center accreditations">
-          <div className="flex flex-wrap justify-center w-full md:w-8/12 gap-y-6">
+          <div className="flex flex-wrap justify-center w-full md:w-10/12 gap-y-6">
             <div className="w-1/2 md:w-1/5 flex justify-center">
               <img src={Img1} alt="" />
             </div>
