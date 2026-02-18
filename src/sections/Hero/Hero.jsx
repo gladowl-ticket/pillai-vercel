@@ -3,6 +3,7 @@ import Hero_1 from "../../assets/hero/1.png";
 import Hero_2 from "../../assets/hero/2.png";
 import Hero_3 from "../../assets/hero/3.png";
 import Hero_4 from "../../assets/hero/4.png";
+import './Hero.css';
 
 import HeroM_1 from "../../assets/hero/01.png";
 import HeroM_2 from "../../assets/hero/02.png";
