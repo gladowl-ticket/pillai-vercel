@@ -1,4 +1,9 @@
-import { Accordion, AccordionPanel, AccordionTitle, AccordionContent } from "flowbite-react";
+import {
+  Accordion,
+  AccordionPanel,
+  AccordionTitle,
+  AccordionContent,
+} from "flowbite-react";
 import { useState } from "react";
 
 const WhyChooseDesk = ({whyChooseData}) =>{
@@ -37,20 +42,20 @@ return(
                   </div>
 
                   {/* DESKTOP IMAGES */}
-                      {isOpen && (
-                        <div className="hidden lg:flex gap-3 p-4">
-                          <img src={item.img1} className="w-1/2 rounded-lg" />
-                          <img src={item.img2} className="w-1/2 rounded-lg" />
-                        </div>
-                      )}
+                  {isOpen && (
+                    <div className="hidden lg:flex gap-3 p-4">
+                      <img src={item.img1} className="w-1/2 rounded-lg" />
+                      <img src={item.img2} className="w-1/2 rounded-lg" />
+                    </div>
+                  )}
                 </div>
               </AccordionTitle>
             </AccordionPanel>
-            );
-        }       )}
-        </Accordion>
-      </div>
-);
-}
+          );
+        })}
+      </Accordion>
+    </div>
+  );
+};
 
 export default WhyChooseDesk;

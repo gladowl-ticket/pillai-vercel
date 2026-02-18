@@ -106,7 +106,7 @@ function SectionCarousel({ title, icon, slides }) {
       <div className="overflow-hidden ps-5" ref={emblaRef}>
         <div className="flex -ms-5">
           {slides.map((slide, i) => (
-            <div key={i} className="flex-[0_0_100%] md:lg:flex-[0_0_80%] px-2">
+            <div key={i} className="flex-[0_0_100%] lg:flex-[0_0_80%] px-2">
               <div className="item border border-light-red rounded-xl p-3 lg:p-4 relative overflow-hidden bg_dark_red">
                 <h4 className="font-semibold mb-2 relative z-10">
                   {slide.title}

@@ -9,33 +9,36 @@ const Accreditations = () => {
   return (
     <section className="py-12 bg_v_light_red">
       <div className="container">
-        <div className="flex flex-wrap mb-6 justify-center">
-        <h2 className="text-5xl text-red-800 font-bold">
-          Accreditations & Accolades
-        </h2>
-      </div>
-      <div className="flex justify-center">
-        <div className="flex flex-wrap justify-between w-full md:w-8/12 accreditations">
-          <div className="w-30">
-            <img src={Img1} alt="" className="" />
-          </div>
-          <div className="w-30">
-            <img src={Img2} alt="" className="" />
-          </div>
-          <div className="w-30">
-            <img src={Img3} alt="" className="" />
-          </div>
-          <div className="w-30">
-            <img src={Img4} alt="" className="" />
-          </div>
-          <div className="w-30">
-            <img src={Img5} alt="" className="" />
+        <div className="flex justify-center mb-6">
+          <h2 className="text-5xl text-red-800 font-bold text-center">
+            Accreditations & Accolades
+          </h2>
+        </div>
+
+        <div className="flex justify-center accreditations">
+          <div className="flex flex-wrap justify-center w-full md:w-8/12 gap-y-6">
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img1} alt="" />
+            </div>
+
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img2} alt="" />
+            </div>
+
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img3} alt="" />
+            </div>
+
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img4} alt="" />
+            </div>
+
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img5} alt="" />
+            </div>
           </div>
         </div>
       </div>
-
-      </div>
-      
     </section>
   );
 };

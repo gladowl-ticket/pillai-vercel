@@ -189,7 +189,7 @@ p {
 
 .program_desc_i {
   position: relative;
-  left: -30px;
+  left: -10px;
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -197,8 +197,8 @@ p {
 .program_carousel::before {
   content: "";
   position: absolute;
-  left: -15px;
-  top: 54px;
+  left: 6px;
+  top: 42px;
   height: calc(100% - 30px);
   border-left: 1px dashed #fff;
   width: 1px;
@@ -273,11 +273,18 @@ p {
   border-bottom: solid 2px #ee8d21;
 }
 @media (min-width: 992px) {
+  .program_carousel::before {
+    left: -15px;
+    top: 54px;
+  }
   .accreditations img {
     height: 140px;
   }
   .ps-01 {
     padding-left: 45px;
+  }
+  .program_desc_i {
+    left: -30px;
   }
 }
 .mb-3 {
