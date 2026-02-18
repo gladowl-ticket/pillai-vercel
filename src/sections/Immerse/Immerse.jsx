@@ -63,7 +63,7 @@ export default function Immerse() {
     <section className="bg-gray-100 py-16 overflow-hidden" id="events">
       <div className="container  px-4">
         <div className="flex justify-center text-center mb-10">
-          <h2 className="text-3xl lg:text-5xl font-bold text-red-800">
+          <h2 className="text-3xl lg:text-4xl font-bold text-red-800">
             <span className="font-normal ">Life at </span> Pillai University
           </h2>
         </div>

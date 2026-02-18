@@ -34,18 +34,18 @@ const gallery = [
 ];
 
 const Life = () => {
-    const videoRefs = useRef([]);
-const handlePlay = (index) => {
-  // pause all videos
-  videoRefs.current.forEach((video) => {
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-  });
+  const videoRefs = useRef([]);
+  const handlePlay = (index) => {
+    // pause all videos
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
 
-  setPlayingIndex(index);
-};
+    setPlayingIndex(index);
+  };
 
   const [playingIndex, setPlayingIndex] = useState(null);
 
@@ -82,7 +82,7 @@ const handlePlay = (index) => {
           </>
         ) : (
           <video
-          ref={(el) => (videoRefs.current[index] = el)}
+            ref={(el) => (videoRefs.current[index] = el)}
             src={item.video}
             controls
             className="w-full h-full object-cover"
@@ -97,8 +97,9 @@ const handlePlay = (index) => {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="flex justify-center text-center mb-10">
-          <h2 className="text-3xl lg:text-5xl font-bold text-red-800">
-            <span className="font-normal">Because life</span> happens beyond <br />
+          <h2 className="text-3xl lg:text-4xl font-bold text-red-800">
+            <span className="font-normal">Because life</span> happens beyond{" "}
+            <br />
             classrooms too
           </h2>
         </div>
