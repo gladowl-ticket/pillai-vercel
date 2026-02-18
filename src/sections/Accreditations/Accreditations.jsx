@@ -7,8 +7,9 @@ import Img5 from "../../assets/accreditation/5.png";
 
 const Accreditations = () => {
   return (
-    <section className="container py-12 bg_v_light_red">
-      <div className="flex flex-wrap mb-6 justify-center">
+    <section className="py-12 bg_v_light_red">
+      <div className="container">
+        <div className="flex flex-wrap mb-6 justify-center">
         <h2 className="text-5xl text-red-800 font-bold">
           Accreditations & Accolades
         </h2>
@@ -32,6 +33,9 @@ const Accreditations = () => {
           </div>
         </div>
       </div>
+
+      </div>
+      
     </section>
   );
 };
