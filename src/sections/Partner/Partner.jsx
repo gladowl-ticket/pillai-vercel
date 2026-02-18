@@ -15,9 +15,6 @@ import img7 from "../../assets/partners/7.png";
 import img8 from "../../assets/partners/8.png";
 import img9 from "../../assets/partners/9.png";
 
-const Partner = () => {
-  const partners = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
-
 const Partner = () =>{
     const partners = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
     return(
