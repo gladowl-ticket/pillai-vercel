@@ -27,8 +27,8 @@ const Section = () =>{
             <Hero/>
             <About/>
             <Stats/>
-            <Accreditations/>
             <Partner/>
+            <Accreditations/>
             <Research/>
             <Programs/>
             <Placement/>
