@@ -1,9 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
-import Img1 from '../../assets/Placement/1.png';
-import Img2 from '../../assets/Placement/2.png';
-import Img3 from '../../assets/Placement/3.png';
-import Img4 from '../../assets/Placement/4.png';
+import Img1 from '../../assets/placement/1.png';
+import Img2 from '../../assets/placement/2.png';
+import Img3 from '../../assets/placement/3.png';
+import Img4 from '../../assets/placement/4.png';
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
