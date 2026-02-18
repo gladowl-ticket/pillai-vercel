@@ -20,6 +20,7 @@ const Hero = () => {
         [&_[data-testid='carousel-indicator'][aria-current='true']]:bg-black
         [&_[data-testid='carousel-left-control']]:text-black
         [&_[data-testid='carousel-right-control']]:text-black
+        hero_section
       "
     >
       <Carousel slide interval={1500}>
