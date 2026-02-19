@@ -191,13 +191,13 @@ function SectionCarousel({ title, icon, slides }) {
         <div className="program_carousel_nav">
           <button
             onClick={scrollPrev}
-            className="bg-[var(--light_yellow)] text-black w-8 h-8 rounded-full flex items-center justify-center"
+            className="bg-orange-400 text-black w-8 h-8 rounded-full flex items-center justify-center"
           >
             <BsArrowLeft />
           </button>
           <button
             onClick={scrollNext}
-            className="bg-[var(--light_yellow)] text-black w-8 h-8 rounded-full flex items-center justify-center"
+            className="bg-orange-400 text-black w-8 h-8 rounded-full flex items-center justify-center"
           >
             <BsArrowRight />
           </button>

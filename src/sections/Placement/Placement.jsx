@@ -29,15 +29,15 @@ const desc = ["Companies", "Job Offers", "Average Package", "Placements"];
 
 
 return(
-<section className="container py-12" id="placement">
-    <div className="flex flex-wrap">
-        <div className="w-full md:w-1/2 md:pe-4">
+<section className="container pb-12" id="placement">
+    <div className="flex flex-wrap-reverse">
+        <div className="w-full md:w-[50%] md:pe-4">
         {/* Carousel */}
             <div className="">
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex">
                         {images.map((src, index) => (
-                        <div key={index} className="min-w-full lg:min-w-1/2 px-2">
+                        <div key={index} className="min-w-full lg:min-w-[50%] px-2">
                             <div className="rounded-2xl overflow-hidden shadow-md">
                                 <img src={src} alt={`slide-${index}`} className="w-full object-contain" />
                             </div>
@@ -47,7 +47,7 @@ return(
                 </div>
 
                 {/* Navigation */}
-                <div className="flex justify-end gap-4 mt-6">
+                <div className="flex md:justify-end justify-center gap-4 mt-6">
                     <button onClick={scrollPrev} className="p-2 bg-orange-400 rounded-full cursor-pointer">
                         <BsArrowLeft />
                     </button>
@@ -57,7 +57,7 @@ return(
                 </div>
             </div>
         </div>
-        <div className="w-full md:w-1/2 md:ps-4">
+        <div className="w-full md:w-[50%] md:ps-4">
             <p className='text-base mb-4'>Placements Highlights</p>
             <h2 className='text-5xl text-red-800 font-bold mb-4'>Top Global Companies <br /> Recruit Our Talent</h2>
             <p className="text-justify">Our university is recognized for its exceptional placement record, with top recruiters and leading

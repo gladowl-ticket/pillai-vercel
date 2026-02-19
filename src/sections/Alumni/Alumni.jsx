@@ -89,7 +89,7 @@ const Alumni = () => {
               <div className="overflow-hidden" ref={thumbRef}>
                 <div className="flex ">
                   {thumbnail.map((src, i) => (
-                    <div key={i} className="min-w-1/5 px-2">
+                    <div key={i} className="min-w-[20%] px-2">
                       <img
                         src={src}
                         onClick={() => scrollTo(i)}
@@ -134,7 +134,7 @@ const Alumni = () => {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {images.map((src, index) => (
-                  <div key={index} className="min-w-full md:min-w-1/2 px-2">
+                  <div key={index} className="min-w-full md:min-w-[50%] px-2">
                     <img
                       src={src}
                       alt={`alumni-${index}`}
@@ -152,7 +152,7 @@ const Alumni = () => {
                   key={i}
                   src={src}
                   onClick={() => scrollTo(i)}
-                  className={`w-16 h-16 object-cover rounded-lg cursor-pointer border-2 ${
+                  className={`w-[100px] h-[100px] object-cover rounded-lg cursor-pointer border-2 ${
                     selectedIndex === i
                       ? "border-yellow-400"
                       : "border-transparent"

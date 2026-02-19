@@ -17,11 +17,11 @@ export function Header() {
     <div className="container mx-auto">
       <Navbar fluid rounded theme={navbarTheme}>
         <NavbarBrand href="/">
-          <img src={logo} className="mr-3 h-15" alt="Pillai University" />
+          <img src={logo} className="mr-3 h-[60px]" alt="Pillai University" />
         </NavbarBrand>
 
         <div className="flex md:order-2">
-          <Button data="Enquire Now" onClick={openModal} className="me-4 md:me-0" />
+          <Button data="Enquire Now" onClick={openModal} className="mr-4 md:mr-0" />
           <NavbarToggle />
         </div>
 
@@ -37,4 +37,3 @@ export function Header() {
     </div>
   );
 }
-

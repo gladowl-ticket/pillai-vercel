@@ -135,7 +135,7 @@ function SectionCarousel({ title, icon, slides }) {
       </div>
 
       <div className="overflow-hidden ps-5" ref={emblaRef}>
-        <div className="flex -ms-5">
+        <div className="flex -ms-5 pb-1">
           {slides.map((slide, i) => (
   <div
     key={i}
@@ -174,7 +174,7 @@ function SectionCarousel({ title, icon, slides }) {
           className={`w-8 h-8 rounded-full flex items-center justify-center
             ${
               canScrollPrev
-                ? "bg-[var(--light_yellow)] text-black"
+                ? "bg-orange-400 text-black"
                 : "bg-gray-400 text-gray-600 cursor-not-allowed"
             }`}
           aria-label="Previous"
@@ -189,7 +189,7 @@ function SectionCarousel({ title, icon, slides }) {
           className={`w-8 h-8 rounded-full flex items-center justify-center
             ${
               canScrollNext
-                ? "bg-[var(--light_yellow)] text-black"
+                ? "bg-orange-400 text-black"
                 : "bg-gray-400 text-gray-600 cursor-not-allowed"
             }`}
           aria-label="Next"
