@@ -36,7 +36,7 @@ aria-label="Close"
 <iframe
 title="Pillai Index 2026"
 src={FORM_URL}
-className="h-[680px] md:h-[520px] w-full border-0"
+className="h-[580px] md:h-[520px] w-full border-0"
 />
 </ModalBody>
 </Modal>
