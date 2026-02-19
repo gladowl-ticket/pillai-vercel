@@ -301,3 +301,11 @@ p {
   outline: none !important;
   box-shadow: none !important;
 }
+
+@media (max-width:1023px){
+  .close_btn_modal{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+}

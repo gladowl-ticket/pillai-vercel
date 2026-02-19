@@ -16,7 +16,7 @@ return (
 <div className="flex flex-col items-center gap-2 md:flex-row">
 <img src={logo} alt="Pillai University" className="h-12" />
 <div className="text-center md:text-left">
-<h6 className="text-sm font-semibold">Apply Now for Pillai University</h6>
+<h6 className="text-md md:text-sm font-semibold">Apply Now for Pillai University</h6>
 <p className="text-xs text-red-700">
 Enquire about the PULSE Entrance Exam and get 100% scholarship*.
 </p>
@@ -25,7 +25,7 @@ Enquire about the PULSE Entrance Exam and get 100% scholarship*.
 <button
 type="button"
 onClick={closeModal}
-className="mt-2 rounded-full border border-gray-300 px-3 py-1 text-xs text-gray-600 transition hover:bg-gray-100 md:mt-0"
+className="mt-2 rounded-full border border-gray-300 px-3 py-1 text-xs text-gray-600 transition hover:bg-gray-100 md:mt-0 close_btn_modal"
 aria-label="Close"
 >
 ✕
@@ -36,7 +36,7 @@ aria-label="Close"
 <iframe
 title="Pillai Index 2026"
 src={FORM_URL}
-className="h-[520px] w-full border-0"
+className="h-[680px] md:h-[520px] w-full border-0"
 />
 </ModalBody>
 </Modal>
