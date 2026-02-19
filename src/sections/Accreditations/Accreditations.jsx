@@ -10,8 +10,8 @@ const Accreditations = () => {
     <section className="py-12 bg_v_light_red">
       <div className="container">
         <div className="flex justify-center mb-6">
-          <h2 className="text-5xl text-red-800 font-bold text-center">
-            Accreditations & Accolades
+          <h2 className="text-4xl md:text-5xl text-red-800 font-bold text-center">
+            <span class="font-normal text-black">Accreditations & </span>Accolades*
           </h2>
         </div>
 

@@ -27,7 +27,7 @@ const Research = () => {
 
 <section className="container py-12" id="research">
     <div className="flex flex-wrap justify-center mb-6 flex-col">
-        <h2 className='text-5xl text-red-800 font-bold mb-2 text-center'>Research & Innovation</h2>
+        <h2 className='text-4xl md:text-5xl text-red-800 font-bold mb-2 text-center'><span className="text-orange-400 font-normal"> Research & </span>Innovation</h2>
         <p className='text-base text-center'>Advancing Knowledge, Shaping Tomorrow.</p>
     </div>
     <div className="flex flex-wrap justify-center">

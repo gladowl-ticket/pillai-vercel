@@ -4,7 +4,7 @@ const About = () =>{
 return(
 <section className='py-12 container' id="aboutus">
     <div className="flex justify-center mb-6">
-        <h2 className='text-5xl text-red-800 font-bold'>About Pillai University</h2>
+        <h2 className='text-4xl md:text-5xl text-red-800 font-bold'>About <span className='text-orange-400 font-normal'>Pillai </span>University</h2>
     </div>
     <div className="flex flex-wrap">
         <div className="w-full md:w-6/12 md:pe-8 relative">
@@ -16,7 +16,7 @@ return(
                 <source src="https://d3s04l0089mebw.cloudfront.net/static/website/videos/Landscape.webm"
                     type="video/webm" />
             </video>
-            <div className="absolute bg-red-800 rounded-xl p-4 -bottom-20 md:-bottom-4 right-2">
+            <div className="absolute bg-red-800 rounded-xl p-4 -bottom-20 md:-bottom-4 right-2 shadow">
                 <h4 className='text-white text-sm text-center'>
                     <span className='text-4xl font-bold'>50+</span> <br /> Years of Excellence <br />
 (Mahatma Education Society)</h4>

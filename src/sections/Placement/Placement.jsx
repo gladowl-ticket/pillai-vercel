@@ -59,7 +59,7 @@ return(
         </div>
         <div className="w-full md:w-[50%] md:ps-4">
             <p className='text-base mb-4'>Placements Highlights</p>
-            <h2 className='text-5xl text-red-800 font-bold mb-4'>Top Global Companies <br /> Recruit Our Talent</h2>
+            <h2 className='text-4xl md:text-5xl text-red-800 font-bold mb-4'><span className="text-orange-400 font-normal">Top Global </span>Companies <br /> Recruit Our Talent</h2>
             <p className="text-justify">Our university is recognized for its exceptional placement record, with top recruiters and leading
                 companies visiting our campus every year for student recruitment.</p>
             <br />

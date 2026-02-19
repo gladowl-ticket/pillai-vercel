@@ -23,8 +23,9 @@ const Stats = () => {
     <section className="container mx-auto pb-16 px-4">
       {/* Heading */}
       <div className="flex justify-center mb-10">
-        <h2 className="text-3xl lg:text-5xl text-red-800 font-bold text-center">
-          Legacy of Excellence
+        <h2 className="text-4xl lg:text-5xl text-red-800 font-bold text-center">
+          <span className="text-orange-400 font-normal">Legacy </span>
+            of Excellence
         </h2>
       </div>
 

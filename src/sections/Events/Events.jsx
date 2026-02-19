@@ -23,8 +23,8 @@ const [active, setActive] = useState(0);
 return (
 <section className="pb-10" id="events">
     <div className="container text-center">
-        <h2 className="text-5xl md:text-4xl text-red-800 font-bold mb-8">
-            <span>Life at </span> Pillai University
+        <h2 className="text-4xl md:text-5xl text-red-800 font-bold mb-8">
+            <span className="text-orange-400 font-normal">Life at </span> Pillai University
         </h2>
     </div>
 

@@ -24,8 +24,8 @@ const Partner = () => {
         <div className="w-full lg:w-1/12"></div>
  
         <div className="w-full lg:w-3/12 pb-10 md:pb-0">
-          <h2 className="text-6xl text-white font-bold hidden md:block">Knowledge <br /> Partner</h2>
-          <h2 className="text-5xl text-white font-bold md:hidden">Knowledge  Partner</h2>
+          <h2 className="text-5xl text-white font-bold hidden md:block">Knowledge <br /> Partner</h2>
+          <h2 className="text-4xl text-center text-white font-bold md:hidden">Knowledge  Partner</h2>
         </div>
  
         <div className="w-full lg:w-8/12 bg-white rounded-bl-xl rounded-tl-xl px-6 py-6">

@@ -78,7 +78,7 @@ const Alumni = () => {
           <div className="w-full md:w-5/12 mb-6 md:mb-0 md:pe-4">
             <p className="uppercase mb-1 text-white">Alumni</p>
 
-            <h2 className="text-3xl lg:text-4xl font-bold ">
+            <h2 className="text-4xl md:text-[42px] leading-tight font-bold ">
               <span className="font-normal">Explore inspiring journeys of</span>{" "}
               graduates excelling in engineering, management, technology, and
               more.
@@ -152,9 +152,9 @@ const Alumni = () => {
                   key={i}
                   src={src}
                   onClick={() => scrollTo(i)}
-                  className={`w-[100px] h-[100px] object-cover rounded-lg cursor-pointer border-2 ${
+                  className={`w-[100px] h-[100px] object-cover rounded-lg cursor-pointer border-4 ${
                     selectedIndex === i
-                      ? "border-yellow-400"
+                      ? "border-white"
                       : "border-transparent"
                   }`}
                 />

@@ -97,8 +97,8 @@ const Life = () => {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="flex justify-center text-center mb-10">
-          <h2 className="text-5xl font-bold text-red-800">
-            <span className="font-normal">Because life</span> happens beyond{" "}
+          <h2 className="text-4xl md:text-5xl font-bold text-red-800">
+            <span className="font-normal text-orange-400">Because life</span> happens beyond{" "}
             <br />
             classrooms too
           </h2>

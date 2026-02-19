@@ -23,7 +23,7 @@ const Recruiters = () =>{
     return(
         <section className="container pb-12">
             <div className="flex justify-center">
-                <h2 className='text-5xl text-red-800 font-bold mb-8'>Top Recruiters</h2>
+                <h2 className='text-5xl text-red-800 font-bold mb-8'><span className='text-orange-400 font-normal'>Top </span> Recruiters</h2>
             </div>
             <div className="flex flex-wrap">
                 {

@@ -41,7 +41,7 @@ const WhyChoose = () =>{
 return(
 <section className="container pb-12">
     <div className="flex">
-        <h2 className='text-5xl text-red-800 font-bold mb-8'>Why Should You Choose <br /> Pillai University?</h2>
+        <h2 className='text-5xl text-red-800 font-bold mb-8'> <span className='text-orange-400 font-normal'>Why Should You Choose </span><br /> Pillai University?</h2>
     </div>
     {/* desktop */}
     <div className="justify-center hidden lg:flex">
