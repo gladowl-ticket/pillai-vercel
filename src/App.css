@@ -68,7 +68,7 @@ p {
 }
 
 .programs .level_btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--light_red);
   color: #fff;
 }
 
@@ -86,7 +86,7 @@ p {
 }
 
 .programs .course_btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--light_red);
 }
 
 .programs .course_btn.active {
