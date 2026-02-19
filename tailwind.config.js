@@ -1,3 +1,4 @@
+// tailwind.config.js
 import colors from "tailwindcss/colors";
 import flowbitePlugin from "flowbite/plugin";
 
@@ -35,5 +36,17 @@ export default {
       },
     },
   },
-  plugins: [flowbitePlugin],
+  plugins: [
+    flowbitePlugin,
+    function ({ addUtilities }) {
+      addUtilities({
+        ".writing-vertical-rl": {
+          writingMode: "vertical-rl",
+        },
+        ".writing-vertical-lr": {
+          writingMode: "vertical-lr",
+        },
+      });
+    },
+  ],
 };

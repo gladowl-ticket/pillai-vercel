@@ -17,6 +17,14 @@ const tabsData = [
       "Celebrate rhythm, tradition, and vibrant festive energy together.",
   },
   {
+    id: 1,
+    title: "Algeria Cultural Fest",
+    image: img1,
+    heading: "Dandiya Night",
+    description:
+      "Celebrate rhythm, tradition, and vibrant festive energy together.",
+  },
+  {
     id: 2,
     title: "Garba Celebration",
     image: img2,
@@ -54,7 +62,7 @@ const tabsData = [
   },
 ];
 
-export default function Immerse() {
+export default function Events() {
   const [activeTab, setActiveTab] = useState(1);
 
   const activeContent = tabsData.find((tab) => tab.id === activeTab);

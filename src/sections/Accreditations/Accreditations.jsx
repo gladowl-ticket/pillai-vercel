@@ -25,9 +25,9 @@ const Accreditations = () => {
               <img src={Img2} alt="" />
             </div>
 
-            <div className="w-1/2 md:w-1/5 flex justify-center">
+            {/* <div className="w-1/2 md:w-1/5 flex justify-center">
               <img src={Img3} alt="" />
-            </div>
+            </div> */}
 
             <div className="w-1/2 md:w-1/5 flex justify-center">
               <img src={Img4} alt="" />

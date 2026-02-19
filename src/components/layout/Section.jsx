@@ -16,7 +16,7 @@ import Infrastructure from '../../sections/Infra/Infra';
 import CTA from '../../sections/CTA/CTA';
 import Footer from './Footer';
 import Marquee from '../../sections/Marquee/Marquee';
-import Immerse from '../../sections/Immerse/Immerse';
+import Events from '../../sections/Events/Events';
 import ApplyNowDrawer from '../../sections/ApplyNowDrawer/ApplyNowDrawer';
 import FormModal from '../../sections/FormModal/FormModal';
 
@@ -37,7 +37,7 @@ const Section = () =>{
             <Alumni/>
             <Life/>
             <Infrastructure/>
-            <Immerse/>
+            <Events/>
             <CTA/>
             <Footer/>
             <Marquee/>

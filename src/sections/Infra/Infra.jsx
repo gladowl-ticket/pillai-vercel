@@ -17,7 +17,7 @@ const Infrastructure = () => {
             Our Infrastructure
           </h6>
 
-          <h2 className="text-3xl lg:text-4xl font-bold text-red-800 mt-2">
+          <h2 className="text-4xl md:text-5xl font-bold text-red-800 mt-2">
             Experience a vibrant{" "}
             <span className="text-orange-400 font-normal">campus life</span>
             <br />

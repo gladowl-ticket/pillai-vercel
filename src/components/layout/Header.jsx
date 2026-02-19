@@ -21,7 +21,7 @@ export function Header() {
         </NavbarBrand>
 
         <div className="flex md:order-2">
-          <Button data="Enquire Now" onClick={openModal} />
+          <Button data="Enquire Now" onClick={openModal} className="me-4 md:me-0" />
           <NavbarToggle />
         </div>
 
