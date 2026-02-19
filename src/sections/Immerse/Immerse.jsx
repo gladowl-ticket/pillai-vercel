@@ -60,10 +60,10 @@ export default function Immerse() {
   const activeContent = tabsData.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="bg-gray-100 py-16 overflow-hidden" id="events">
+    <section className="bg-gray-100 py-16 overflow-hidden dark:bg-gray-950" id="events">
       <div className="container  px-4">
         <div className="flex justify-center text-center mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-red-800">
+          <h2 className="text-3xl lg:text-4xl font-bold text-red-800 dark:text-orange-400">
             <span className="font-normal ">Life at </span> Pillai University
           </h2>
         </div>
@@ -102,7 +102,7 @@ export default function Immerse() {
                   ${
                     isActive
                       ? "w-28 bg-orange text-white shadow-xl"
-                      : "w-16 bg-[#e7cfb0] text-black hover:bg-orange hover:text-white"
+                      : "w-16 bg-[#e7cfb0] text-black hover:bg-orange hover:text-white dark:bg-gray-800 dark:text-gray-100"
                   }`}
                 >
                   {/* PLUS ICON */}
@@ -148,7 +148,7 @@ export default function Immerse() {
           ${
             isActive
               ? "bg-orange text-white shadow-lg"
-              : "bg-[#e7cfb0] text-black hover:bg-orange hover:text-white"
+              : "bg-[#e7cfb0] text-black hover:bg-orange hover:text-white dark:bg-gray-800 dark:text-gray-100"
           }
 
           /* DESKTOP STYLE */
