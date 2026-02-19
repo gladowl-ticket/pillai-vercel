@@ -3,6 +3,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import MobileProgramCard from "./MobileProgramCard";
 import { BsBook } from "react-icons/bs";
 import { BsPencil } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function ProgramCard({ program, categoryKey, index }) {
   return (
@@ -26,7 +28,7 @@ export default function ProgramCard({ program, categoryKey, index }) {
 
 function DesktopProgramCard({ program }) {
   return (
-    <div className="border border-dark-red rounded-3xl bg_dark_red pt-5 ps-01 overflow-hidden text-white">
+    <div className="border border-dark-red rounded-lg bg_dark_red pt-5 ps-01 overflow-hidden text-white">
       <h4 className="text-xl lg:text-2xl font-semibold text-white">
         {program.program_name}
       </h4>
@@ -129,31 +131,37 @@ function SectionCarousel({ title, icon, slides }) {
         <div className="program_desc_i bg-yellow-400 text-black flex items-center justify-center fs_12">
           {icon}
         </div>
-        <span className="font-medium">{title}</span>
+        <span className="font-medium -ms-6">{title}</span>
       </div>
 
       <div className="overflow-hidden ps-5" ref={emblaRef}>
         <div className="flex -ms-5">
           {slides.map((slide, i) => (
-            <div key={i} className="flex-[0_0_100%] lg:flex-[0_0_80%] px-2">
-              <div className="item border border-light-red rounded-xl p-3 lg:p-4 relative overflow-hidden bg_dark_red">
-                <h4 className="font-semibold mb-2 relative z-10">
-                  {slide.title}
-                </h4>
-                <div className="text-sm space-y-2 relative z-10">
-                  {slide.content}
-                </div>
+  <div
+    key={i}
+    className="flex-[0_0_100%] lg:flex-[0_0_80%] px-2 flex"
+  >
+    <div className="item border border-light-red rounded-md p-3 lg:p-4 relative overflow-hidden bg_dark_red h-full w-full flex flex-col">
+      
+      <h4 className="font-semibold mb-2 relative z-10">
+        {slide.title}
+      </h4>
 
-                {slide.img && (
-                  <img
-                    src={slide.img}
-                    alt=""
-                    className="absolute right-0 top-0 h-full w-auto opacity-20"
-                  />
-                )}
-              </div>
-            </div>
-          ))}
+      <div className="text-sm space-y-2 relative z-10 flex-grow">
+        {slide.content}
+      </div>
+
+      {slide.img && (
+        <img
+          src={slide.img}
+          alt=""
+          className="absolute right-0 top-0 h-full w-auto object-cover"
+        />
+      )}
+    </div>
+  </div>
+))}
+
         </div>
       </div>
 
@@ -171,7 +179,7 @@ function SectionCarousel({ title, icon, slides }) {
             }`}
           aria-label="Previous"
         >
-          ‹
+          <BsArrowLeft />
         </button>
 
         <button
@@ -186,7 +194,7 @@ function SectionCarousel({ title, icon, slides }) {
             }`}
           aria-label="Next"
         >
-          ›
+          <BsArrowRight />
         </button>
       </div>
 

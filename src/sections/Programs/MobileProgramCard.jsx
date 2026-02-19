@@ -3,10 +3,12 @@ import { useCallback, useEffect, useState } from "react";
 import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flowbite-react";
 import { BsBook } from "react-icons/bs";
 import { BsPencil } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 const accordionTheme = {
   title: {
-    base: "flex w-full items-center justify-between p-5 text-left font-medium text-white rounded-lg",
+    base: "flex w-full items-center justify-between p-0 text-left font-medium text-white rounded-lg",
     flush: {
       off: "hover:bg-red-800 focus:ring-0 dark:hover:bg-red-800",
       on: "bg-transparent"
@@ -22,20 +24,24 @@ const accordionTheme = {
         on: "rotate-180"
       }
     }
+  },
+  content: {
+    base: "p-0 bg-transparent border-0"
   }
 };
 
 
+
 function MobileProgramCard({ program, categoryKey, index }) {
   return (
-    <Accordion theme={accordionTheme} collapseAll className="mobile_accordion">
+    <Accordion theme={accordionTheme} collapseAll className="mobile_accordion border-0">
       <AccordionPanel className="hover:text-red-800">
-        <AccordionTitle className="bg-red-900 text-white rounded-lg hover:!bg-red-800">
+        <AccordionTitle className="bg-red-900 text-white rounded-lg border text-md border-white hover:!bg-red-800">
           {program.program_name}
         </AccordionTitle>
-        <AccordionContent>
+        <AccordionContent className="p-0 mt-2 border-white rounded-lg border">
           <div className="bg_dark_red text-white rounded-xl p-4">
-            <h4 className="font-semibold mb-2">{program.School_name}</h4>
+            <h4 className="font-semibold text-xl">{program.School_name}</h4>
 
             <SectionCarousel
               title="What you will learn"
@@ -148,40 +154,38 @@ function SectionCarousel({ title, icon, slides }) {
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <div className="relative py-6 program_carousel">
+    <div className="relative py-6 program_carousel pb-10">
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <div className="program_desc_i bg-yellow-400 text-black flex items-center justify-center fs_12">
           {icon}
         </div>
-        <span className="font-medium">{title}</span>
+        <span className="font-medium text-md -ms-4">{title}</span>
       </div>
 
       {/* Carousel */}
-      <div className="relative">
-        <div className="overflow-hidden md:pl-0 pl-6" ref={emblaRef}>
-          <div className="flex gap-6">
-            {slides.map((slide, i) => (
-              <div
-                key={i}
-                className="min-w-full lg:min-w-[85%] px-2"
-              >
-                <div className="item border border-light-red rounded-xl p-4 relative overflow-hidden bg_dark_red">
-                  <h4 className="font-semibold mb-2">{slide.title}</h4>
-                  <div className="text-sm space-y-2 text-white">{slide.content}</div>
+<div className="relative">
+  <div className="overflow-hidden md:pl-0 pl-6" ref={emblaRef}>
+    <div className="flex gap-6 items-stretch">
+      {slides.map((slide, i) => (
+        <div key={i} className="min-w-full flex">
+          <div className="item border border-light-red rounded-xl p-4 relative overflow-hidden bg_dark_red flex flex-col h-full w-full">
+            <h4 className="font-semibold mb-2">{slide.title}</h4>
+            <div className="text-sm space-y-2 text-white flex-grow">{slide.content}</div>
 
-                  {slide.img && (
-                    <img
-                      src={slide.img}
-                      alt=""
-                      className="absolute right-0 top-0 h-full w-auto opacity-20"
-                    />
-                  )}
-                </div>
-              </div>
-            ))}
+            {slide.img && (
+              <img
+                src={slide.img}
+                alt=""
+                className="absolute right-0 top-0 h-full w-auto opacity-20"
+              />
+            )}
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+
 
         {/* NAV ARROWS */}
         <div className="program_carousel_nav">
@@ -189,29 +193,16 @@ function SectionCarousel({ title, icon, slides }) {
             onClick={scrollPrev}
             className="bg-[var(--light_yellow)] text-black w-8 h-8 rounded-full flex items-center justify-center"
           >
-            ‹
+            <BsArrowLeft />
           </button>
           <button
             onClick={scrollNext}
             className="bg-[var(--light_yellow)] text-black w-8 h-8 rounded-full flex items-center justify-center"
           >
-            ›
+            <BsArrowRight />
           </button>
         </div>
       </div>
-
-      {/* DOTS */}
-      {/* <div className="flex justify-center gap-2 mt-4">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => emblaApi?.scrollTo(i)}
-            className={`program_carousel_dot w-2 h-2 rounded-full ${
-              i === selectedIndex ? "bg-yellow-400" : "bg-white/40"
-            }`}
-          />
-        ))}
-      </div> */}
 
       <div className="bg_overlay_program absolute"></div>
     </div>

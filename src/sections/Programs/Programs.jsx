@@ -25,12 +25,12 @@ function CategoryContent({ categoryKey, programs }) {
       {/* Desktop Layout */}
       <div className="hidden lg:flex gap-6 w-full">
         {/* LEFT PROGRAM LIST */}
-        <div className="w-1/4 flex flex-col gap-2 lg:pe-4">
+        <div className="w-1/4 flex flex-col gap-2 lg:pe-4 ">
           {programs.map((program, i) => (
             <button
               key={i}
               onClick={() => setActiveIndex(i)}
-              className={`course_btn text-left p-3 flex justify-between items-center transition
+              className={`course_btn text-left p-3 flex justify-between items-center transition   cursor-pointer
                 ${activeIndex === i ? "active" : ""}`}
             >
               {program.program_name}
@@ -58,14 +58,14 @@ function CategoryContent({ categoryKey, programs }) {
 const Programs = () => {
   const customTheme = {
   tablist: {
-    base: "flex flex-wrap justify-center gap-2 w-fit mx-auto", // optional spacing
+    base: "flex flex-wrap justify-center gap-2 w-fit mx-auto", 
     tabitem: {
   base: "level_btn rounded-none flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200",
       styles: {
         pills: {
-          base: "", // removes default bg
+          base: "", 
           active: {
-            on: "bg-[var(--light_yellow)] text-black shadow-none ring-0",
+            on: "bg-yellow-400 text-black shadow-none ring-0",
             off: "bg-transparent text-white hover:bg-white/10",
           },
         },
@@ -92,7 +92,8 @@ const Programs = () => {
             <Tabs.Item key={key} title={label}>
               <CategoryContent
                 categoryKey={key}
-                programs={programData[key] || []}
+                programs={programData[key] || []
+                }
               />
             </Tabs.Item>
           ))}
