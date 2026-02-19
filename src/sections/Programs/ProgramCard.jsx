@@ -235,8 +235,10 @@ function HtmlText({ html, className = "" }) {
 function getProgramImage(type, index) {
   if (!type || !index) return null;
 
-  return new URL(
-    `../../assets/programs/${type}-img/${index}.png`,
-    import.meta.url,
-  ).href;
+  try {
+    return require(`../../assets/programs/${type}-img/${index}.png`);
+  } catch (err) {
+    console.warn('Image not found:', type, index);
+    return null;
+  }
 }
