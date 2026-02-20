@@ -19,6 +19,7 @@ import Marquee from '../../sections/Marquee/Marquee';
 import Events from '../../sections/Events/Events';
 import ApplyNowDrawer from '../../sections/ApplyNowDrawer/ApplyNowDrawer';
 import FormModal from '../../sections/FormModal/FormModal';
+import BackToTop from '../../sections/CTA/BackToTop';
 
 const Section = () =>{
     return(
@@ -43,6 +44,7 @@ const Section = () =>{
             <Marquee/>
             <ApplyNowDrawer/>
             <FormModal/>
+            <BackToTop/>
         </>
     );
 }

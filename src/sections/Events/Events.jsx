@@ -30,7 +30,7 @@ return (
 
     {/* Tabs */}
     <div className="container">
-        <div className="flex flex-col md:flex-row gap-3 md:h-130">
+        <div className="flex flex-col md:flex-row gap-3 md:h-[520px]">
             {events.map((event, i) => {
             const isActive = active === i;
 
@@ -67,16 +67,16 @@ return (
                     <img src={event.img} alt={event.title} className="w-full h-55 md:h-full object-cover" />
 
                     {/* Overlay */}
-                    <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-6">
-                        <div>
-                            <h2 className="text-2xl md:text-4xl font-bold text-gray-200">
-                                {event.title}
-                            </h2>
-                            <div className="w-16 h-0.5 bg-white my-3"></div>
-                            <p className="text-white text-sm md:text-base">
-                                {event.desc}
-                            </p>
-                        </div>
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 to-transparent p-6">
+                    <div>
+                        <h2 className="text-2xl md:text-4xl font-bold text-gray-200">
+                        {event.title}
+                        </h2>
+                        <div className="w-16 h-0.5 bg-white my-3"></div>
+                        <p className="text-white text-sm md:text-base">
+                        {event.desc}
+                        </p>
+                    </div>
                     </div>
                 </div>
             </div>
