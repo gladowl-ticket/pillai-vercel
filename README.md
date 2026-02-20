@@ -19,4 +19,10 @@ This app is organized with a scalable, production-ready React architecture: layo
 ## Notes
 
 The main entry point is `src/main.jsx`, and the composed layout lives in `src/app/App.jsx`.
+
+### Security audit (dev vs production)
+
+- `npm audit` reports vulnerabilities across both production and dev tooling.
+- To check only production dependencies (what ships to users), run `npm audit --omit=dev`.
+- Any remaining high issues after this are typically from dev-only tooling like ESLint and do not affect the production build.
 # pillai-vercel
