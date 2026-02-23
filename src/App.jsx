@@ -1,11 +1,11 @@
-import Section from "./components/layout/Section";
 import { ModalProvider } from "./sections/FormModal/ModalContext";
 import './App.css';
+import AppRoutes from "./routes/AppRoutes";
  
 const App = () => {
 return (
 <ModalProvider>
-<Section/>
+<AppRoutes />
 </ModalProvider>
 )
 }
