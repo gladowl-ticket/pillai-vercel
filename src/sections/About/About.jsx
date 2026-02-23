@@ -23,15 +23,15 @@ return(
             </div>
         </div>
         <div className="w-full md:w-6/12 ps-4 mt-24 md:mt-0">
-            <h4 className='text-2xl mb-4'>Shaping The Future With 50+ Years Of Educational Excellence</h4>
-            <p className='text-justify'>Backed by over <span className="font-bold">five decades </span>
+            <h4 className='text-2xl lg:mb-0 xl:mb-4'>Shaping The Future With 50+ Years Of Educational Excellence</h4>
+            <p className='text-justify '>Backed by over <span className="font-bold">five decades </span>
                  of proven commitment to transformative education, <span className="font-bold">Mahatma Education Society </span>
                 has spawned and nurtured generations of leaders, innovators, and scholars through its 48 institutions.
                 Building on this rich heritage of <span className="font-bold">academic excellence </span>, we are proud to carry forward this legacy through
                 Pillai University, a State recognized Private University that unites the best of traditional practices
                 and innovation under one roof.</p>
                 <br />
-            <p className='text-sm text-justify'>At Pillai University, we are committed to deliver multidisciplinary education designed to meet the ever
+            <p className='text-sm text-justify lg:hidden xl:block'>At Pillai University, we are committed to deliver multidisciplinary education designed to meet the ever
                 changing needs of industry and academia. Our world-class infrastructure, seasoned faculty, and
                 forward-thinking curriculum empower students to become leaders, entrepreneurs, innovators, and
                 change-makers.</p>

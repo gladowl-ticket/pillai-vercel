@@ -1,4 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
 import Img1 from '../../assets/research/1.jpg';
 import Img2 from '../../assets/research/2.jpg';
@@ -8,10 +9,19 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 const Research = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start"
+    },
+    [
+      Autoplay({
+        delay: 2000,        // 3 seconds
+        stopOnInteraction: false
+      })
+    ]
+  );
+
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);

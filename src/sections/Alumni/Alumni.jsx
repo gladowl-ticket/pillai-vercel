@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import "./Alumni.css";
 import { useModal } from "../../sections/FormModal/ModalContext";
+import Autoplay from "embla-carousel-autoplay";
 
 import Img1 from "../../assets/alumni/1.png";
 import Img2 from "../../assets/alumni/2.png";
@@ -28,10 +29,19 @@ const Alumni = () => {
   const { openModal } = useModal();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+      {
+        loop: true,
+        align: "start"
+      },
+      [
+        Autoplay({
+          delay: 2000,        // 3 seconds
+          stopOnInteraction: false
+        })
+      ]
+    );
+
   const [thumbRef, thumbApi] = useEmblaCarousel({
     dragFree: true,
     containScroll: "keepSnaps",
@@ -78,7 +88,7 @@ const Alumni = () => {
           <div className="w-full md:w-5/12 mb-6 md:mb-0 md:pe-4">
             <p className="uppercase mb-1 text-white">Alumni</p>
 
-            <h2 className="text-4xl md:text-[42px] leading-tight font-bold ">
+            <h2 className="text-4xl lg:text-[26px] xl:text-4xl 2xl:text-5xl leading-tight font-bold ">
               <span className="font-normal">Explore inspiring journeys of</span>{" "}
               graduates excelling in engineering, management, technology, and
               more.
@@ -89,11 +99,11 @@ const Alumni = () => {
               <div className="overflow-hidden" ref={thumbRef}>
                 <div className="flex ">
                   {thumbnail.map((src, i) => (
-                    <div key={i} className="min-w-[20%] px-2">
+                    <div key={i} className="min-w-[20%] lg:px-0 xl:px-2">
                       <img
                         src={src}
                         onClick={() => scrollTo(i)}
-                        className={`h-28 w-full object-cover rounded-lg cursor-pointer border-4 transition ${
+                        className={`xl:h-28 lg:h-20 w-full object-cover rounded-lg cursor-pointer border-4 transition ${
                           selectedIndex === i
                             ? "border-white"
                             : "border-transparent"

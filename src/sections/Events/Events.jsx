@@ -9,9 +9,9 @@ import Img7 from "../../assets/events/7.png";
 
 const events = [
 { title: "Dandiya Night", desc: "Celebrate rhythm, tradition, and vibrant festive energy together.", img: Img1 },
-{ title: "Algeria Cultural Fest", desc: "Experience Algerian culture, music, cuisine, and heritage celebrations.", img:Img2 },
+{ title: "Alegria Cultural Fest", desc: "Experience Alegria culture, music, cuisine, and heritage celebrations.", img:Img2 },
 { title: "Garba Celebration", desc: "Join colorful dances honoring tradition, unity, and festive spirit.", img: Img3 },
-{ title: "Algeria DJ Night", desc: "Dance to electrifying beats blending Algerian and global sounds.", img: Img4 },
+{ title: "Alegria DJ Night", desc: "Dance to electrifying beats blending Alegria and global sounds.", img: Img4 },
 { title: "Republic Day Celebration", desc: "Honoring freedom, unity, and pride on 26th January celebrations.", img: Img5 },
 { title: "Classical Bharatanatyam", desc: "Experience timeless grace through expressive movements and sacred storytelling.", img: Img6 },
 { title: "Christmas Celebration", desc: "Celebrate joy, warmth, and togetherness in festive holiday spirit.", img: Img7 },

@@ -11,30 +11,26 @@ const Accreditations = () => {
       <div className="container">
         <div className="flex justify-center mb-6">
           <h2 className="text-4xl md:text-5xl text-red-800 font-bold text-center">
-            <span class="font-normal text-black">Accreditations & </span>Accolades*
+            <span className="font-normal text-black">Accreditations & </span>Accolades*
           </h2>
         </div>
 
         <div className="flex justify-center accreditations">
           <div className="flex flex-wrap justify-center w-full md:w-10/12 gap-y-6">
             <div className="w-1/2 md:w-1/5 flex justify-center">
-              <img src={Img1} alt="" />
+              <img src={Img1} alt="" className="lg:px-4 xl:px-0" />
             </div>
 
             <div className="w-1/2 md:w-1/5 flex justify-center">
-              <img src={Img2} alt="" />
-            </div>
-
-            {/* <div className="w-1/2 md:w-1/5 flex justify-center">
-              <img src={Img3} alt="" />
-            </div> */}
-
-            <div className="w-1/2 md:w-1/5 flex justify-center">
-              <img src={Img4} alt="" />
+              <img src={Img2} alt="" className="lg:px-4 xl:px-0" />
             </div>
 
             <div className="w-1/2 md:w-1/5 flex justify-center">
-              <img src={Img5} alt="" />
+              <img src={Img4} alt="" className="lg:px-4 xl:px-0" />
+            </div>
+
+            <div className="w-1/2 md:w-1/5 flex justify-center">
+              <img src={Img5} alt="" className="lg:px-4 xl:px-0" />
             </div>
           </div>
         </div>
