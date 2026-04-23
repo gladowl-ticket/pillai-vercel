@@ -1,6 +1,5 @@
 # Pillai University Landing Page (React)
 
-
 This app is organized with a scalable, production-ready React architecture: layout and UI components are reusable, data is centralized, and sections are feature-based.
 
 ## Structure
